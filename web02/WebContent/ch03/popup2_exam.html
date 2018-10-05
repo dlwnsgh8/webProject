@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function winopen() {
+	var gugudan = document.getElementById("gugudan").value;
+	window.open("gugu_exam.jsp?gugudan="+gugudan, "_blank", "width=400, height=600");
+}
+</script>
+</head>
+<body>
+<input type="text" id="gugudan" value="2" size="10">
+<input type="button" value="팝업창 열기" onclick="winopen()">
+</body>
+</html>

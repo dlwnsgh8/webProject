@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="puppy.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+function goyak() {location.href = "yak.html";}
+</script>
+</head>
+<body>
+<div data-role="page" data-theme="c">
+	<div data-role="header" style="background: white;">
+		<a href="#panel" style="margin:15px 0px 0px 5px;"> 〓 </a>
+			<p id="title"><a href="main.html">Our Puppy</a></p>
+	</div>
+	<div data-role="content" id="content" style="background-image:none; height:700px;">
+		<div id="panel" data-role="panel" data-display="overlay" data-position-fixed="true">
+			<div style="margin:80px 0px 0px 20px; font-size:1.3em;">
+				<a href="intro.html" data-transition="flow">오시는길</a><br><p> <br>
+				<a href="snack.html" data-transition="flow">간식</a><br><p> <br>
+				<a href="toy.html" data-transition="flow">장난감</a><br><p> <br>
+				<a href="gel.html" data-transition="flow">갤러리</a><br><p> <br>
+				<a href="hugi.html" data-transition="flow">상품후기</a><br><p> <br>
+				<a href="gogaek.html" data-transition="flow">고객센터</a>
+			</div>
+		</div>
+		<div id="goods"><h1 style="text-shadow: 3px 3px #DDDDDD; text-align: center;">　　JOIN　　</h1>
+			<table style="width:100%;">
+				<tr><th style="text-align:left; font-size:.8em; width:80px;">아이디</th>
+					<td colspan="5"><input style="width:100%" type="text"></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">비밀번호</th>
+					<td colspan="5"><input style="width:100%" type="password" name="pwd"></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">이름</th>
+					<td colspan="5"><input style="width:100%" type="text"></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">이메일주소</th>
+					<td colspan="1"><input style="width:100%" type="email"></td>
+					<td colspan="4">
+						<select><option selected>주소
+								<option>＠naver.com		<option>＠nate.com
+								<option>＠daum.net		<option>＠gmail.com
+								</select></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">전화번호</th>
+					<td><select>
+							<option>010		<option>011		<option>016
+							<option>017		<option>018		<option>019
+						</select></td>
+						<td>-</td>
+						<td><input maxlength="4" value=""></td>
+						<td>-</td>
+						<td><input maxlength="4" value=""></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">집주소</th>
+					<td colspan="5"><input style="width:100%"></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">생년월일</th>
+					<td colspan="5"><input type="date" name="birth"></td></tr>
+				<tr><th style="text-align:left; font-size:.8em;">본인소개</th>
+					<td colspan="5"><textarea rows="5" placeholder="나를 마음껏 소개해봐요"></textarea></td></tr>
+			</table>
+			<table style="width:100%;">
+				<tr><td><input type="button" value="약관확인하러가기" onclick="goyak()" style="background:gray"></td></tr>
+			</table>
+		</div>
+	</div>
+	<div data-role="footer" style="background: white;">
+		<table style="width:100%; margin: 20px;">
+			<tr><td rowspan="4">고객센터<br><em class="tel">1234-5678</em><br>
+					<em class="days">월-금 10:00~18:00<br>점심시간 12:00~13:00<br>주말＆공휴일은 쉽니다</em><br></td></tr>
+			<tr><th style="text-align:left;"><a href="#" class="right">자주묻는질문</a></th></tr>
+			<tr><th style="text-align:left;"><a href="gogaek.html" class="right">고객센터</a></th></tr>
+			<tr><th style="text-align:left;"><a href="#" class="right">1:1문의</a></th></tr>	
+		</table><hr />
+		<table id="footer_line">
+			<tr><td><a href="#">공지사항</a></td>
+				<td><a href="yak.html">이용약관</a></td>
+				<td><a href="yak.html">개인정보처리방침</a></td>
+				<td><a href="#">입사지원</a></td></tr>
+		</table><hr />
+		<div style="margin:20px;"><em class="addr">반품주소</em><br>서울특별시 강동구 천호동 000번지</div>
+		<table style="width:100%; font-size:.4em; margin: 10px;">
+			<tr><td>상점명</td><td>Our Puppy</td></tr>
+			<tr><td>대표이사</td><td>홍길동</td></tr>
+			<tr><td>고객센터</td><td>1234-5678</td></tr>
+			<tr><td>이메일</td><td>apple@banana.com</td></tr>
+			<tr><td>주소</td><td>서울특별시 강동구 천호동 000번지</td></tr>
+			<tr><td>개인정보관리책임</td><td>홍길동</td></tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

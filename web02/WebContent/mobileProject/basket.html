@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="puppy.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+function login() {location.href = "login.html";}
+function join() {location.href = "join.html";}
+function basket() {location.href = "basket.html";}
+function gobackhome() {location.href = "main.html";}
+function calc() {
+	var ex = Number(document.getElementById("total").defaultValue);
+	for(var i=1; i<=11; i++) {
+		var object = document.getElementById("sk"+i);
+		if(object.checked) {
+			ex += Number(object.value);
+		}
+	}
+	document.getElementById("total").value = ex;
+}
+</script>
+<style type="text/css">
+#basketList th {
+	background-color: #333;
+	color: #fff;
+	border: 1px solid #ccc;
+	height: 30px;
+	text-align: center;
+}
+.price, .name {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<div data-role="page" data-theme="c">
+	<div data-role="header" style="background: white;">
+		<a href="#panel" style="margin:15px 0px 0px 5px; color:black;"> 〓 </a>
+		<p id="title"><a href="main.html">Our Puppy</a></p>
+		<span style="float: right; margin: 0px 10px 0px 0px; font-size:.7em;">
+			<input type="button" value="Log_In" onclick="login()">
+			<input type="button" value="Join" onclick="join()">
+			<input type="button" value="Basket" onclick="basket()">
+		</span>
+	</div>
+	<div data-role="content" id="content">
+		<div id="panel" data-role="panel" data-display="overlay" data-position-fixed="true">
+			<div style="margin:80px 0px 0px 20px; font-size:1.3em;">
+				<a href="intro.html" data-transition="flow">Our Puppy</a><br><p> <br>
+				<a href="snack.html" data-transition="flow">간식</a><br><p> <br>
+				<a href="toy.html" data-transition="flow">장난감</a><br><p> <br>
+				<a href="gel.html" data-transition="flow">갤러리</a><br><p> <br>
+				<a href="hugi.html" data-transition="flow">상품후기</a><br><p> <br>
+				<a href="gogaek.html" data-transition="flow">고객센터</a>
+			</div>
+		</div>
+	<div id="goods"><h1 style="text-shadow: 3px 3px #DDDDDD; text-align: center;">　　BASKET　　</h1>
+		<table id="basketList" style="border:2px dotted black; width:100%;">
+			<colgroup>
+				<col width="50%">
+				<col width="30%">
+				<col width="10%">
+			</colgroup>
+			<thead>
+				<tr><th>상품명</th>
+					<th>가격</th>
+					<th>선택</th></tr>
+				<tr><td style=" border-bottom: 1px solid black;"colspan="3">간식류</td></tr>
+			</thead>
+			<tbody>
+				<tr><td class="name">관절영양제</td><td class="price">15000</td>
+					<td><input type="checkbox" name="sk1" id="sk1" value="15000" onclick="calc()"></td></tr>
+				<tr><td class="name">수제육포</td><td class="price">10000</td>
+					<td><input type="checkbox" name="sk2" id="sk2" value="10000" onclick="calc()"></td></tr>
+				<tr><td class="name">반려견용 우유</td><td class="price">5000</td>
+					<td><input type="checkbox" name="sk3" id="sk3" value="5000" onclick="calc()"></td></tr>
+				<tr><td class="name">치석제거용 개껌</td><td class="price">3000</td>
+					<td><input type="checkbox" name="sk4" id="sk4" value="3000" onclick="calc()"></td></tr>
+				<tr><td class="name">오리도가니</td><td class="price">10000</td>
+					<td><input type="checkbox" name="sk5" id="sk5" value="10000" onclick="calc()"></td></tr>
+			</tbody>
+			<thead>
+				<tr><td style=" border-bottom:1px solid black;" colspan="3">장난감류</td></tr>
+			</thead>
+			<tbody>
+				<tr><td class="name">꼬꼬댁인형</td><td class="price">3000</td>
+					<td><input type="checkbox" name="sk6" id="sk6" value="3000" onclick="calc()"></td></tr>
+				<tr><td class="name">딸랑이공</td><td class="price">2500</td>
+					<td><input type="checkbox" name="sk7" id="sk7" value="2500" onclick="calc()"></td></tr>
+				<tr><td class="name">뼈모양장난감</td><td class="price">3500</td>
+					<td><input type="checkbox" name="sk8" id="sk8" value="3500" onclick="calc()"></td></tr>
+				<tr><td class="name">실타래</td><td class="price">2000</td>
+					<td><input type="checkbox" name="sk9" id="sk9" value="2000" onclick="calc()"></td></tr>
+				<tr><td class="name">친환경고무재질장난감</td><td class="price">3000</td>
+					<td><input type="checkbox" name="sk10" id="sk10" value="3000" onclick="calc()"></td></tr>
+				<tr><td class="name">쭙쭙장난감</td><td class="price">1500</td>
+					<td><input type="checkbox" name="sk11" id="sk11" value="1500" onclick="calc()"></td></tr>
+			</tbody>
+			<tfoot>
+				<tr><th>총금액</th><td colspan="2"><input type="text" name="total" id="total" value="0" readonly></td></tr>
+			</tfoot>
+		</table>
+		<button style="width: 160px; height: 40px; font-size: 15px; margin-left: 25%; margin-top:10px;" onclick="alert('주문이 완료되었습니다.'), gobackhome()">주문하기</button>
+	</div></div>
+	<div data-role="footer" style="background: white;">
+		<table style="width:100%; margin: 20px;">
+			<tr><td rowspan="4">고객센터<br><em class="tel">1234-5678</em><br>
+					<em class="days">월-금 10:00~18:00<br>점심시간 12:00~13:00<br>주말＆공휴일은 쉽니다</em><br></td></tr>
+			<tr><th style="text-align:left;"><a href="#" class="right">자주묻는질문</a></th></tr>
+			<tr><th style="text-align:left;"><a href="gogaek.html" class="right">고객센터</a></th></tr>
+			<tr><th style="text-align:left;"><a href="#" class="right">1:1문의</a></th></tr>	
+		</table><hr />
+		<table id="footer_line">
+			<tr><td><a href="#">공지사항</a></td>
+				<td><a href="yak-1.html">이용약관</a></td>
+				<td><a href="yak-1.html">개인정보처리방침</a></td>
+				<td><a href="#">입사지원</a></td></tr>
+		</table><hr />
+		<div style="margin:20px;"><em class="addr">반품주소</em><br>서울특별시 강동구 천호동 000번지</div>
+		<table style="width:100%; font-size:.4em; margin: 10px;">
+			<tr><td>상점명</td><td>Our Puppy</td></tr>
+			<tr><td>대표이사</td><td>홍길동</td></tr>
+			<tr><td>고객센터</td><td>1234-5678</td></tr>
+			<tr><td>이메일</td><td>apple@banana.com</td></tr>
+			<tr><td>주소</td><td>서울특별시 강동구 천호동 000번지</td></tr>
+			<tr><td>개인정보관리책임</td><td>홍길동</td></tr>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

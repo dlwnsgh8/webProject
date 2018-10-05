@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+document.write("<h1>가위, 바위, 보 맞추기</h1>");
+var t = prompt("가위, 바위, 보 중 선택하세요");
+var tNum;
+switch(t) { //가위바위보를 숫자1,2,3으로 변환
+case "가위":
+	tNum = 1;	break;
+case "바위":
+	tNum = 2;	break;
+case "보":
+	tNum = 3;	break;
+default:
+	alert("잘못 입력하였습니다");
+	location.reload(); //페이지 새로고침
+}
+var com = Math.ceil(Math.random()*3); //컴퓨터가 가위(1),바위(2),보(3)
+//random() : 0.0~1.0사이의 난수
+document.write("<img src=../images/math_img_"+com+".png>"); //난수를 사용하여 가위바위보 이미지 출력
+if(tNum == com) {
+	alert("맞았습니다.");
+}else if(tNum) {
+	alert("틀렸습니다.");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

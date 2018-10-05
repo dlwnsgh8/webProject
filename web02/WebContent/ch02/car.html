@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function Car(model, speed, color) {
+	this.model2 = model;
+	this.speed2 = speed;
+	this.color2 = color;
+	this.brake = function() {
+		this.speed2 -= 10;
+	}
+	this.accel = function() {
+		this.speed2 += 10;
+	}
+}
+myCar = new Car("520d", 60, "red");
+document.write("모델:"+myCar.model2+" 속도:"+myCar.speed2+" 색상:"+myCar.color2+"<br>");
+myCar.accel();
+document.write("모델:"+myCar.model2+" 속도:"+myCar.speed2+" 색상:"+myCar.color2+"<br>");
+myCar.brake();
+document.write("모델:"+myCar.model2+" 속도:"+myCar.speed2+" 색상:"+myCar.color2+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

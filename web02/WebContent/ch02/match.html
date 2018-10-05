@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+str = "자바 프로그램, Like father, like son.";
+//문자열.match(/검색키워드/옵션);
+//i(insensitive) : 대소문자 구분없이 검색
+//g(global) : 전역검색
+result = str.match(/Like/ig);
+document.write(result+"<br>");
+
+result = str.replace("자바", "Java"); //문자열.replace(A, B); A를 B로 변경
+document.write(result+"<br>");
+
+str = "one two three four five";
+array = str.split(" "); //배열 = 문자열.split("구분자"); 구분자를 기준으로 배열생성
+for(var s in array) { //향상된 for문. s에는 인덱스값만 넘어감
+	document.write(array[s]+"<br>");
+	document.write(s+"<br>");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

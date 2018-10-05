@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+<script type="text/javascript">
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+context.font = "italic 40pt Arial"; //폰트설정
+context.strokeStyle = "blue";
+context.strokeText("Hello World", 20, 100); //문자열 출력(문자열, x, y)
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function car() {
+	//Number(문자열) → 숫자로 변환
+	//defaultValue : 기본값, 초기값을 저장하는 변수
+	//value : 값
+	var basic_car = Number(document.getElementById("total").defaultValue);
+	for(var i=1; i<=3; i++) {
+		var chkObj = document.getElementById("opt"+i); //id가 opt1,2,3
+		if(chkObj.checked) { //체크상태이면
+			basic_car += Number(chkObj.value);
+		}
+	}
+	document.getElementById("total").value = basic_car;
+}
+</script>
+<style type="text/css">
+* { /* 모든 태그에 공통적으로 적용 */
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/1.5 dotum, "돋움", gulim, "굴림", sans-serif;
+}
+li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse; /* 테이블의 여백을 0로 만듦 */
+	border-spacing: 0;
+}
+h1 {
+	text-align: center;
+}
+#carZone {
+	width: 600px;
+	margin: 0 auto;
+}
+#estimate {
+	width: 100%;
+}
+#estimate th, td {
+	border: 1px solid #ccc;
+	height: 30px;
+}
+#estimate th {
+	background-color: #333;
+	color: #fff;
+}
+#carZone td {
+	text-align: center;
+}
+tfoot {
+	font-size: 15px;
+	font-weight: bold;
+}
+#total {
+	border: none 0;
+	background: none;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>자동차 견적</h1>
+<div id="carZone">
+	<p>
+		<img src="../images/car1.jpg" width=150 height=90>
+	</p>
+	<table id="estimate">
+		<colgroup> <!-- 태그를 그룹으로 관리, 행이 아니라 열 단위로 스타일 제어가능 -->
+			<col width="380px">
+			<col width="160px">
+			<col width="*">
+		</colgroup>
+		<thead> <!-- 테이블의 헤더 -->
+			<tr>
+				<th>옵션</th>
+				<th>추가가격</th>
+				<th>선택</th>
+			</tr>
+		</thead>
+		<tfoot> <!-- 테이블 푸터영역 -->
+			<tr>
+				<th>(기본)차량가격</th>
+				<td colspan="2"><input type="text" name="total" id="total" value="13450000" readonly="readonly"></td>
+			</tr>
+		</tfoot>
+		<tbody>
+			<tr>
+				<td><label for="opt1">인조가죽시트</label></td>
+				<td>250000</td>
+				<td><input type="checkbox" name="opt1" id="opt1" value="250000" onclick="car()"></td>
+			</tr>
+			<tr>
+				<td>
+					<label for="opt2">네비게이션</label>
+				</td>
+				<td>250000</td>
+				<td>
+					<input type="checkbox" name="opt2" id="opt2" value="250000" onclick="car()">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="opt3">선루프</label>
+				</td>
+				<td>440000</td>
+				<td>
+					<input type="checkbox" name="opt3" id="opt3" value="440000" onclick="car()">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

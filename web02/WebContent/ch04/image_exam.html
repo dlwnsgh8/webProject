@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600"></canvas>
+<script type="text/javascript">
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+var image = new Image();
+image.src = "../images/car1.jpg";
+image.onload = function() {
+	context.drawImage(image, 150, 100);
+}
+</script>
+</body>
+</html>

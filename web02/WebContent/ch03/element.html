@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li>아이템1</li>
+	<li>아이템2</li>
+	<li>아이템3</li>
+	<li>아이템4</li>
+	<li>아이템5</li>
+</ul>
+<script type="text/javascript">
+//getElementsByTagName → 지금은 JQuery로 대체중
+var list = document.getElementsByTagName("ul")[0]; //첫번째 ul태그
+var allItems = list.getElementsByTagName("li"); //li태그 배열을 기리킴
+for(i=0; i<allItems.length; i++) {
+	//firstChild 첫번째 요소의 데이터, <li>아이템1</li>를 가리킴
+	alter(allItems[i]+firstChild.date);
+}
+</script>
+</body>
+</html>

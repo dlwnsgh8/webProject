@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../include/jquery-3.3.1.min.js"> /* 이 코드가 없으면 jquery가 실행되지 않음 */</script>
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"> /* 사이트에 링크시키는 방법 */</script> -->
+<script type="text/javascript">
+//$ → JQuery
+//$().함수();
+//$(선택자).이벤트(콜백함수)
+//$(document).ready(function(){}); → 정식표현
+//$(function(){}); → 약식표현
+$(function() { //현재 문서가 로딩이 완료되면 (콜백함수)자동으로 실행됨
+	$("h2").click(function() {
+		$(this).hide(); //클릭한 태그(해당객체)가 숨겨짐
+	});
+});
+</script>
+</head>
+<body>
+<h2>첫번째 h2</h2>
+<h2>두번째 h2</h2>
+<h2>세번째 h2</h2>
+</body>
+</html>

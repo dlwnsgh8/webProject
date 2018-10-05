@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var now = new Date(); //날짜 객체 생성(오늘날짜)
+	var day = now.getDay(); // 요일(일요일:0~토요일:6)
+	document.write("요일코드: "+day+"<br>");
+	var yoil = new Array("일", "월", "화", "수", "목", "금", "토");
+	document.write("오늘은 "+yoil[day]+"요일입니다.<br>");
+	var imgYoil = new Array("sun.gif", "mon.gif", "tue.gif", "wed.gif", "thu.gif", "fri.gif", "sat.gif");
+	document.write("오늘은 <img src=../images/"+imgYoil[day]+">요일입니다."+"<br>"); //일~토요일 출력
+	for (i=0; i<imgYoil.length; i++) {
+		document.write(yoil[i]+"요일 "+"<img src=../images/"+imgYoil[i]+">");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

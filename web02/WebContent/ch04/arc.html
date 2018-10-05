@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200"></canvas>
+<script type="text/javascript">
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+context.beginPath(); //경로초기화
+//arc(x,y원점의 좌표, 반지름값, 시작각도, 끝각도, antiClockwise)
+//antiClockwise : true면 반시계방향, false면 시계방향
+//1.0*Math.PI : 180도
+//2.0*Math.PI : 360도
+context.arc(100, 100, 80, 0, 1.0*Math.PI, false);
+context.fillStyle="red";
+context.fill();
+
+context.beginPath();
+context.arc(100, 100, 60, 0, 1.5*Math.PI, false);
+context.fillStyle="blue";
+context.fill();
+
+context.beginPath();
+context.arc(100, 100, 40, 0, 1.5*Math.PI, false);
+context.fillStyle="green";
+context.fill();
+
+context.beginPath();
+context.arc(100, 100, 20, 0, 2.0*Math.PI, false);
+context.fillStyle="white";
+context.fill();
+</script>
+</body>
+</html>

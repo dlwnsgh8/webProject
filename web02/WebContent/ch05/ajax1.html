@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+ $(function() {
+	$("#button1").click(function() {
+		var dan = $("#dan").val();		
+		$.ajax({
+			type: "post",
+			url: "result1.jsp",
+			data: "dan=" + dan,
+			success: function(data) {//콜백함수 (처리 완료시 실행됨)
+				$("#result").html(data);
+			}
+		});
+	});	 
+ });
+</script>
+</head>
+<body>
+<!-- 
+동기적 방식(synchronized) 순서대로 작업 진행
+비동기적 방식(asynchronized) 동시에 진행(백그라운드에서 실행됨)
+ -->
+<h2>동기식(single thread): 새로고침 깜빡임</h2>
+<form action="result1.jsp">
+	단을 입력하세요 <input type="text" name="dan">
+	<input type="submit" value="확인">
+</form> 
+<h2>비동기식(multi thread): 새로고침 안깜빡임</h2>
+	단을 입력하세요 <input type="text" id="dan">
+	<input type="button" id="button1"  value="확인">
+	<div id="result">결과 출력 영역</div>
+</body>
+</html>

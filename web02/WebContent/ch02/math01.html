@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function calc(type) {
+	x = Number(document.getElementById("number1").value)
+	y = "0";
+	switch(type) {
+	case 1:		y = Math.sin((x*Math.PI)/180.0);		break; //싸인
+	case 2:		y = Math.log(x);						break; //로그
+	case 3:		y = Math.sqrt(x);						break; //제곱근
+	case 4:		y = Math.abs(x);						break; //절대값
+	}
+	document.getElementById("total").value = y;
+}
+</script>
+</head>
+<body>
+입력<input id="number1"><br>
+결과<input id="total"><br>
+<input type="button" value="SIN" onclick="calc(1)">
+<input type="button" value="LOG" onclick="calc(2)">
+<input type="button" value="SQRT" onclick="calc(3)">
+<input type="button" value="ABS" onclick="calc(4)">
+</body>
+</html>

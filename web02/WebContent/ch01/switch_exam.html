@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var cha = prompt("좋아하는 캐릭터를 입력하세요(짱구,흰둥이,맹구,짱구엄마)");
+var message = "";
+var img = "";
+switch (cha) {
+case "짱구":
+	message = "정말 귀엽죠??";
+	img = "zzan.gif";
+	break;
+case "흰둥이":
+	message = "사랑스러워요";
+	img = "mooo.gif";
+	break;
+case "맹구":
+	message = "참 씩씩해보이네요";
+	img = "mang.gif";
+	break;
+case "짱구엄마":
+	message = "운동하는건가요?";
+	img = "mom.gif";
+	break;
+default:
+	alert("넷 중에만 골라요ㅠㅠ");
+}
+document.write("<h2>"+message+"</h2>");
+document.write("<img src='../images/"+img+"'/>");
+</script>
+</head>
+<body style="background-image: url('../images/sea.jpg'); background-size: cover;">
+</body>
+</html>

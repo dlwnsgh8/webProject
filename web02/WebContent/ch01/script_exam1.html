@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function enter() {
+	console.log(window.event.keyCode);
+	if(window.event.keyCode == 13) {
+		calc();
+	}
+}
+function calc() {
+	var x = document.getElementById("x").value;
+	var y = document.getElementById("y").value;
+	x = parseInt(x);
+	y = parseInt(y);
+	document.write(x+" + "+y+" = "+(x+y)+"<br>");
+	document.write(x+" - "+y+" = "+(x-y)+"<br>");
+	document.write(x+" × "+y+" = "+(x*y)+"<br>");
+	document.write(x+" ÷ "+y+" = "+(x/y)+"<br>");
+	document.getElementById("result").innerHTML = result;
+}
+</script>
+</head>
+<body>
+숫자를 입력하시오.<br>
+첫번째 정수 : <input type="text" id="x" onkeyup="enter()"><br>
+두번째 정수 : <input type="text" id="y" onkeyup="enter()"><br>
+<input type="button" value="확인" onclick="calc()">
+<div id="result"></div>
+</body>
+</html>

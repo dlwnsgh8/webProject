@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var myArray = [10, 100, 88, 77, 99, 200];
+/* var myArray = ["바나나", "포도", "사과", "수박", "건포도"]; */
+myArray.sort(); //정렬(기본적으로 문자열기준으로 정렬됨)
+document.write("문자열기준 : "+myArray+"<br>");
+//숫자기준으로 정렬하려면 sort()함수를 변경해야 함
+myArray.sort(function(a, b) {return a-b;}); //return a-b : 음수(a가 작다. 그대로), 양수(a가 크다. 자리바꿈), 0(같다)
+document.write("숫자를 오름차순 : "+myArray+"<br>");
+myArray.sort(function(a, b) {return b-a;});
+document.write("내림차순 : "+myArray+"<br>");
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var newArray = numbers.slice(5); //인덱스 5번부터 끝까지 잘라냄
+document.write(newArray+"<br>");
+var newArray2 = numbers.slice(5,8); //인덱스 5번부터 7번까지 잘라냄. slice(start, end-1);
+document.write(newArray2+"<br>");
+var result = numbers.join(";");
+document.write(typeof(numbers)+"<br>");
+document.write(typeof(result)+"<br>");
+document.write(result+"<br>");
+var result2 = result.split("-");
+document.write(result2+"<br>");
+document.write(typeof(result2)+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

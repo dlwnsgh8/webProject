@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+str = "자바 HTML JavaScript JSP SpingFrame Oracle";
+
+result = str.match(/JavaScript/ig);
+document.write("1번문제(match()함수를 써서 JavaScript 출력)"+"<br>"+result+"<br>");
+document.write("<br>");
+
+result = str.replace("자바", "Java");
+document.write("2번문제(replace()함수를 써서 자바 → Java로 변경)"+"<br>"+result+"<br>");
+document.write("<br>");
+
+str = "자바 HTML JavaScript JSP SpingFrame Oracle";
+array = str.split(" ");
+document.write("3번문제(split()함수를 써서 개행처리)"+"<br>");
+for(var s in array) {
+	document.write(array[s]+"<br>");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

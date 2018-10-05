@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<style type="text/css">
+#page {
+	padding: 10px;
+	width: 960px;
+	margin: 20px auto;
+}
+#header {
+	height: 80px;
+}
+#main {
+	width: 500px;
+	float: left;
+}
+#sidebar {
+	margin: 80px 0 0 0;
+	width: 150px;
+	float: right;
+	border: 1px dotted black;
+}
+#footer {
+	clear: both;
+	font-size: .5em;
+	color: gray;
+	padding: 20px 0 0 0;
+}
+@media screen and (max-width: 980px) {
+	#page {
+		width: 94%;
+	}
+	#main {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+}
+@media screen and (max-width: 700px) {
+	#main {
+		auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+@media screen and (max-width: 480px) {
+	#header {
+		height: auto;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<p style="text-align: center; text-shadow: 4px 4px rgb(244,244,244); font-size: 50px; font-weight: bold;">오늘의 날씨</p>
+		</div>
+		<div id="main">
+			<h2>지역별 날씨</h2>
+			<img src="weather.jpg">
+		</div>
+		<div id="sidebar">원하는 지역
+			<ul>
+				<li><a href="#">서울</a></li>
+				<li><a href="#">경기</a></li>
+				<li><a href="#">인천</a></li>
+				<li><a href="#">충청</a></li>
+				<li><a href="#">전라</a></li>
+				<li><a href="#">경상</a></li>
+				<li><a href="#">제주</a></li>
+			</ul>
+		</div>
+		<div id="footer">
+			서울특별시 구로구 디지털로26길 5 에이스하이엔드타워 1차 401호 케이웨더㈜<br>
+			대표전화:02-360-2200&nbsp;&nbsp;팩스:02-360-2288
+		</div>
+	</div>
+</body>
+</html>

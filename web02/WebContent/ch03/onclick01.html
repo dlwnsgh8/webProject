@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function changColor(color) {
+	document.getElementById("target").style.backgroundColor = color;
+}
+function changeText(color) {
+	document.getElementById("target").style.color = color;
+}
+function viewDate() {
+	var now = new Date();
+	var display = now.toLocaleString(); //한국어 날짜포맷으로 변경
+	document.getElementById("time").innerHTML = display;
+	window.setTimeout("viewDate()", 1000); //1초 간격으로 재귀호출
+}
+</script>
+</head>
+<body onload="viewDate();" id="target">
+<h2>배경색상변경(click event)</h2>
+<div id="time"></div>
+<input type="button" value="green" onclick="changColor('green'); changeText('white')">
+<input type="button" value="yellow" onclick="changColor('yellow'); changeText('#ff0000')">
+<input type="button" value="blue" onclick="changColor('#0000ff'); changeText('#ffff00')">
+</body>
+</html>

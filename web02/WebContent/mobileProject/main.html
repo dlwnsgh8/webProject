@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" rel="stylesheet" href="puppy.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+function login() {location.href = "login.html";}
+function join() {location.href = "join.html";}
+function basket() {location.href = "basket.html";}
+window.open("notice.html", "popup", 
+		"width=280, height=335, left=600, top=100, scrollbars=no, toolbars=no, location=no, directories=no, status=no");
+</script>
+</head>
+<body>
+<div data-role="page" data-theme="c">
+	<div data-role="header" style="background: white;">
+		<a href="#panel" style="margin:15px 0px 0px 5px; color:black;"> 〓 </a>
+		<p id="title"><a href="main.html">Our Puppy</a></p>
+		<table style="float: right; margin: 0px 10px 0px 0px; font-size:.7em;">
+			<tr><td><input type="button" value="Log In" onclick="login()"></td>
+			<td><input type="button" value="Join" onclick="join()"></td>
+			<td><input type="button" value="Basket" onclick="basket()"></td></tr>
+		</table>
+	</div>
+	<div data-role="content" id="content">
+		<div id="panel" data-role="panel" data-display="overlay" data-position-fixed="true">
+			<div style="margin:80px 0px 0px 20px; font-size:1.3em;">
+				<a href="intro.html" data-transition="flow">Our Puppy</a><br><p> <br>
+				<a href="snack.html" data-transition="flow">간식</a><br><p> <br>
+				<a href="toy.html" data-transition="flow">장난감</a><br><p> <br>
+				<a href="gel.html" data-transition="flow">갤러리</a><br><p> <br>
+				<a href="hugi.html" data-transition="flow">상품후기</a><br><p> <br>
+				<a href="gogaek.html" data-transition="flow">고객센터</a>
+			</div>
+		</div>
+		<div id="goods"><h2 style="text-align: center;">§ 이달의 상품 §</h2>
+ 			<a href="snack.html"><img src="images/snack3.jpg"></a><div style="height:10px;"></div>
+			<a href="toy.html"><img src="images/toy1.jpg"></a>
+		</div>
+	</div>
+	<div data-role="footer" style="background: white;">
+		<table style="width:100%; margin: 20px;">
+			<tr><td rowspan="4">고객센터<br><em class="tel">1234-5678</em><br>
+					<em class="days">월-금 10:00~18:00<br>점심시간 12:00~13:00<br>주말＆공휴일은 쉽니다</em><br></td></tr>
+			<tr><th style="text-align:left;"><a href="#" class="right">자주묻는질문</a></th></tr>
+			<tr><th style="text-align:left;"><a href="gogaek.html" class="right">고객센터</a></th></tr>
+			<tr><th style="text-align:left;"><a href="#" class="right">1:1문의</a></th></tr>	
+		</table><hr />
+		<table id="footer_line">
+			<tr><td><a href="#">공지사항</a></td>
+				<td><a href="yak-1.html">이용약관</a></td>
+				<td><a href="yak-1.html">개인정보처리방침</a></td>
+				<td><a href="#">입사지원</a></td></tr>
+		</table><hr />
+		<div style="margin:20px;"><em class="addr">반품주소</em><br>서울특별시 강동구 천호동 000번지</div>
+		<table style="width:100%; font-size:.4em; margin: 10px;">
+			<tr><td>상점명</td><td>Our Puppy</td></tr>
+			<tr><td>대표이사</td><td>홍길동</td></tr>
+			<tr><td>고객센터</td><td>1234-5678</td></tr>
+			<tr><td>이메일</td><td>apple@banana.com</td></tr>
+			<tr><td>주소</td><td>서울특별시 강동구 천호동 000번지</td></tr>
+			<tr><td>개인정보관리책임</td><td>홍길동</td></tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>
